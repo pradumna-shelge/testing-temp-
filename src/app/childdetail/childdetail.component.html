@@ -1,0 +1,11 @@
+<div class="flex justify-evenly gap-2 ">
+    <div class="flex flex-col gap-2 ">
+    <ng-container *ngFor="let it of item">
+        <button (click)="get(it)" *ngIf="it.name!=''" class="p-3 bg-cyan-500 text-white rounded-xl">{{it.name|uppercase}}</button >
+    </ng-container>
+</div>
+    <div *ngIf="i>0">
+        <app-details [ob] ='obj'></app-details>
+    </div>
+</div>
+

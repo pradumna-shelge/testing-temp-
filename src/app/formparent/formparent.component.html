@@ -1,0 +1,17 @@
+
+<div class="flex flex-col  gap-5 border m-auto w-1/3 text-center p-3 mt-10 rounded mb-5">
+  <input type="text" placeholder="enter name" [(ngModel)]="obj.name" />
+  <input type="text" placeholder="enter email" [(ngModel)]="obj.email" />
+  <textarea placeholder="enter address" [(ngModel)]="obj.address" ></textarea>
+  <select [(ngModel)]="obj.gender" class="text-black">
+    <option class="text-black" disabled selected value="undefined">Select an gender</option>
+    <option value="male">Male</option>
+    <option value="female">FeMale</option>
+  </select>
+  <button (click)="addData()" class="bg-green-500 p-2 rounded text-white text-xl">Submit</button>
+</div>
+
+<div *ngIf="index > 0" class="mt-10">
+  <app-childdetail [item]="arr"></app-childdetail>
+</div>
+

@@ -1,0 +1,6 @@
+<div class="bg-gray-500 text-white flex flex-col gap-3 p-4 rounded-xl">
+    <ng-container *ngFor="let item of ob | keyvalue">
+        <p *ngIf="item.key !='id'" class="bg-gray-400 p-2 rounded">{{item.key|uppercase}} : {{item.value}}</p>
+    </ng-container> 
+</div>
+
